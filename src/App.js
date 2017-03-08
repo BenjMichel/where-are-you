@@ -14,21 +14,21 @@ const config = {
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { username: '' };
     const fb = firebase.initializeApp(config);
     this.db = fb.database();
   }
 
   add() {
     const rand = Math.random();
-    this.db.ref('users/2').set({
-      username: `name${rand}`,
-      email: 'email2',
+    this.db.ref(`users/${this.state.username}`).set({
+      value: `name${rand}`,
+      username: this.state.username,
     })
   }
 
   componentDidMount() {
-    this.db.ref('users/2').on('value', snapshot => {
+    this.db.ref().on('value', snapshot => {
       const store = snapshot.val();
       this.setState({ store })
     });
@@ -37,7 +37,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>My Prototype</h1>
+        <h1>Où es-tu ?</h1>
+        <p>Bonjour {this.state.username}</p>
+        <input
+          type="text"
+          value={this.state.username}
+          onChange={e => this.setState({ username: e.target.value })}
+        />
         <p>{JSON.stringify(this.state.store)}</p>
         <p onClick={() => this.add()}>Add</p>
       </div>
