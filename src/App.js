@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as firebase from 'firebase';
+import QRScanner from './QRScanner';
 
 // Make sure you swap this out with your Firebase app's config
 const config = {
@@ -46,6 +47,7 @@ class App extends React.Component {
         />
         <p>{JSON.stringify(this.state.store)}</p>
         <p onClick={() => this.add()}>Add</p>
+        <QRScanner />
       </div>
     );
   }
