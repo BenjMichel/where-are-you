@@ -6,6 +6,13 @@
     "react-scripts": "0.9.4"
   },
   "dependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-ava": "^2.4.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
     "firebase": "^3.7.0",
     "leaflet": "^1.0.3",
     "react": "^15.4.2",
