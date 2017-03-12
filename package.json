@@ -15,9 +15,11 @@
     "eslint-plugin-react": "^6.10.0",
     "firebase": "^3.7.0",
     "leaflet": "^1.0.3",
+    "material-ui": "^0.17.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-qr-reader": "^1.0.3"
+    "react-qr-reader": "^1.0.3",
+    "react-tap-event-plugin": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
